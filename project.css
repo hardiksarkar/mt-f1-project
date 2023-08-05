@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto:wght@300&family=Rubik:wght@300;400&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body,
+header {
+  background-color: #f3f3f3;
+}
+
+.text-tomato{
+    color: #FF5E3A;
+    text-decoration: none;
+}
+
+/* header  */
+
+#header > nav {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  font-family: "Rubik", sans-serif;
+}
+
+#header > nav > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+#header > nav > div:nth-child(1) > h3,
+#header > nav > div:nth-child(2) > a:nth-child(1) {
+  color: #ff5151;
+}
+
+#header > nav > div:nth-child(2) a {
+  text-decoration: none;
+  color: #4f5665;
+  padding: 0px 2vw;
+}
+
+/* hero section  */
+
+#hero-sec > div {
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 203, 144, 0.44) 0%,
+    rgba(255, 154, 158, 0.38) 100%
+  );
+  overflow: hidden;
+  height: 37vw;
+}
+
+#hero-sec-1 > h1 {
+  font-family: "Aclonica", sans-serif;
+  font-size: 8vw;
+}
+#hero-sec-1 > p {
+  font-weight: 600;
+}
+#hero-sec-1 > button {
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 81, 81, 0.5) 0%, #ff5e3a 100%);
+  border: none;
+  color: white;
+  box-shadow: 0px 20px 35px rgba(255, 81, 81, 0.389);
+  margin-top: 5vw;
+  font-size: 1vw;
+  padding: 10px 3vw;
+}
+
+#hero-sec-2 > img {
+  width: 30vw;
+}
+#hero-sec-2 > img:nth-child(2) {
+  position: absolute;
+  top: 1px;
+  right: 0px;
+}
+
+/* collection section  */
+
+#collection-sec > div:nth-child(3) > button {
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(173, 173, 173, 0.389);
+  border: none;
+  margin: 0vw 1vw;
+  padding: 10px 2vw;
+  font-size: 1vw;
+}
+#collection-sec > div:nth-child(3) > button:hover {
+  background: linear-gradient(180deg, rgba(255, 81, 81, 0.5) 0%, #ff5e3a 100%);
+  box-shadow: 0px 10px 35px rgba(255, 81, 81, 0.389);
+  color: white;
+  margin: 0vw 1vw;
+  padding: 10px 2vw;
+}
+
+/* collection cards div  */
+
+#collection-cards-div::-webkit-scrollbar{
+    height: 5px;
+}
+#collection-cards-div::-webkit-scrollbar-thumb{
+    background-color: #4f566565;
+    border-radius: 20px;
+}
+
+#collection-cards-div {
+  gap: 2vw;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+#collection-cards-div > .card {
+    flex: 0 0 auto;
+    width: 25rem !important;
+  background: linear-gradient(
+    180deg,
+    rgba(252, 203, 144, 0.44) 0%,
+    rgba(255, 154, 158, 0.38) 100%
+  ) !important;
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+}
+#collection-cards-div > .card > .card-body {
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+#collection-cards-div > .card > div:nth-child(3) > a {
+  border-radius: 10px;
+  background: #ff5e3a;
+  border: none;
+  padding: 0vw 1vw;
+}
+#collection-cards-div > .card > div:nth-child(1) > img {
+  height: 14rem;
+  width: auto;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+}
+
+/* new arrival section  */
+#new-arrival > div:nth-child(2),
+#new-arrival > div:nth-child(2) > div:nth-child(1) {
+  gap: 2vw;
+}
+#new-arrival > div:nth-child(2) > div {
+  flex: 1;
+}
+#new-arrival > div:nth-child(2) > div:nth-child(1) > div > img,
+#new-arrival > div:nth-child(2) > div:nth-child(2) > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* categories section  */
+#categories-sec-cards{
+    display: flex;
+    gap: 1.5vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#categories-sec-cards > .card{
+    border-radius: 25px;
+    border: 0.5px solid rgba(144, 144, 144, 0.25);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+#categories-sec-cards > .card > div:nth-child(1) {
+  background: #f0f0f0;
+  transition: all 0.2s linear;
+}
+#categories-sec-cards > .card > div:nth-child(3)>a{
+    color: #909090;
+    font-weight: 600;
+}
+#categories-sec-cards .heart-icon{
+    display: none;
+    transition: all 0.2s linear;
+}
+#categories-sec-cards .heart-icon:hover{
+    transform: scale(1.1);
+}
+#categories-sec-cards > .card:hover{
+    transform: scale(1.04);
+}
+#categories-sec-cards > .card:hover .heart-icon{
+    display: block;
+}
+#categories-sec-cards > .card:hover>div:nth-child(1){
+    background: linear-gradient(
+        180deg,
+        rgba(252, 203, 144, 0.44) 0%,
+        rgba(255, 154, 158, 0.38) 100%
+      ) ;
+      transform: translateZ(0); 
+}
+
+/* footer  */
+
+.bg-tomato{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #FF5E3A;
+}
+
+footer>div>h5{
+    margin-bottom: 2rem;
+}
