@@ -27,6 +27,20 @@ header {
   justify-content: center;
   align-items: center;
 }
+#header > nav > div:nth-child(1)>h3 {
+ font-size: 2vw;
+ cursor: pointer;
+}
+#header > nav > div:nth-child(1)>svg {
+ width: 2.5vw;
+ height: 2.5vw;
+ cursor: pointer;
+}
+#header > nav > div:nth-child(3)>svg {
+ width: 2.5vw;
+ height: 2.5vw;
+ cursor: pointer;
+}
 
 .no-wrap {
   white-space: nowrap;
@@ -63,6 +77,7 @@ header {
 }
 #hero-sec-1 > p {
   font-weight: 600;
+  font-size: 1.2vw;
 }
 #hero-sec-1 > button {
   border-radius: 10px;
@@ -135,11 +150,13 @@ header {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
 }
-#collection-cards-div > .card > div:nth-child(3) > a {
+#collection-cards-div > .card > div:nth-child(3) > button,#categories-sec .card-body>button.text-nowrap {
   border-radius: 10px;
   background: #ff5e3a;
   border: none;
   padding: 0vw 1vw;
+  cursor: auto;
+  color: white;
 }
 #collection-cards-div > .card > div:nth-child(1) > img {
   height: 14rem;
@@ -184,11 +201,25 @@ header {
   background: #f0f0f0;
   transition: all 0.2s linear;
 }
-#categories-sec-cards > .card > div:nth-child(3)>a{
+#categories-sec .card-body>button.text-nowrap{
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+}
+#categories-sec .card-img-top{
+    width: 10rem;
+    height: 10rem;
+}
+#categories-sec .card-body>p{
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    width: 65%;
+}
+#categories-sec-cards > .card > div:nth-child(3)>button{
     color: #909090;
     font-weight: 600;
+    border: none;
 }
-#categories-sec-cards .heart-icon{
+#categories-sec-cards .heart-icon,#categories-sec .card-body>button.text-nowrap{
     display: none;
     transition: all 0.2s linear;
 }
@@ -201,6 +232,15 @@ header {
 #categories-sec-cards > .card:hover .heart-icon{
     display: block;
 }
+#categories-sec-cards > .card:hover button.text-nowrap{
+    display: block;
+    cursor: pointer;
+}
+
+#categories-sec .card-body>button.text-nowrap:hover{
+    transform: scale(1.1);
+}
+
 #categories-sec-cards > .card:hover>div:nth-child(1){
     background: linear-gradient(
         180deg,
@@ -219,6 +259,40 @@ header {
     background-color: #FF5E3A;
 }
 
-footer>div>h5{
+footer>div>div{
+    margin: 0.5rem;
+}
+footer>div{
+    flex-direction: column;
+}
+
+footer>div>div>h5{
     margin-bottom: 2rem;
+}
+footer{
+    background: rgba(252, 203, 144, 0.15);
+}
+
+
+/* media querries  */
+
+@media all and (min-width:650px){
+    footer>div{
+        flex-direction: row;
+    }
+    footer>div>div:nth-child(1)>svg{
+        width: 15vw;
+    }
+    footer>div>div:nth-child(5) svg{
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    
+    footer>div>div>h5{
+        font-size: 1.5vw;
+        margin-bottom: 2rem;
+    }
+    footer>div>div p,a{
+        font-size: 1vw;
+    }
 }
